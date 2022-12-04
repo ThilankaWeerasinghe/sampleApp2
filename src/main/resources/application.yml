@@ -1,0 +1,27 @@
+logging:
+    level:
+        org:
+            hibernate: DEBUG
+            springframework:
+                web: DEBUG
+spring:
+    application:
+        name: cake-manager
+    datasource:
+        driverClassName: org.h2.Driver
+        password: password
+        url: jdbc:h2:~/test
+        username: sa
+    h2:
+        console:
+            enabled: true
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        hibernate:
+            ddl-auto: create
+        properties:
+            hibernate:
+                format_sql: true
+        shows: true
+server:
+    port: 8282
